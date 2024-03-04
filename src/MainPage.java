@@ -25,8 +25,10 @@ public class MainPage {
         LoginPage loginPage = new LoginPage(tools.driver);
         TransactionPage transactionPage = new TransactionPage(tools.driver);
 
+//        Login Section
         loginPage.doLogin(username, password);
 
+//        Transaction
         transactionPage.searchWatchAccordingToPrice(keywordSearch, priceRange);
         transactionPage.addWatchToCart();
         transactionPage.isiAlamat(phoneNumber,buyerAddress);
